@@ -27,7 +27,7 @@ export const Contact = () => {
     e.preventDefault();
     setButtonText("Sending...");
     let response = await fetch(
-      "https://nivans-portfolio.herokuapp.com/contact",
+      "https://email-sender-portfolio.herokuapp.com/contact",
       {
         method: "POST",
         headers: {
