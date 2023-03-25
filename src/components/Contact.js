@@ -60,7 +60,7 @@ export const Contact = () => {
             <h2>Get In Touch</h2>
             <form onSubmit={handleSubmit}>
               <Row>
-                <Col sm={6} className="px-1">
+                <Col size={12} sm={6} className="px-1">
                   <input
                     type="text"
                     value={formData.firstName}
@@ -68,7 +68,7 @@ export const Contact = () => {
                     onChange={(e) => onFormUpdate("firstName", e.target.value)}
                   />
                 </Col>
-                <Col sm={6} className="px-1">
+                <Col size={12} sm={6} className="px-1">
                   <input
                     type="text"
                     value={formData.lastName}
@@ -76,7 +76,7 @@ export const Contact = () => {
                     onChange={(e) => onFormUpdate("lastName", e.target.value)}
                   />
                 </Col>
-                <Col sm={6} className="px-1">
+                <Col size={12} sm={6} className="px-1">
                   <input
                     type="email"
                     value={formData.email}
@@ -84,7 +84,7 @@ export const Contact = () => {
                     onChange={(e) => onFormUpdate("email", e.target.value)}
                   />
                 </Col>
-                <Col sm={6} className="px-1">
+                <Col size={12} sm={6} className="px-1">
                   <input
                     type="tel"
                     value={formData.phone}
@@ -92,7 +92,7 @@ export const Contact = () => {
                     onChange={(e) => onFormUpdate("phone", e.target.value)}
                   />
                 </Col>
-                <Col sm={6} className="px-1">
+                <Col size={12} className="px-1">
                   <textarea
                     row="6"
                     value={formData.message}
