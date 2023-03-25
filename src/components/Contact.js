@@ -37,11 +37,9 @@ export const Contact = () => {
       }
     );
     setButtonText("Send");
-    let result = response.json();
-    console.log("result", result);
     console.log("response", response);
     setFormData(formInitialData);
-    if (result.value.code === 200) {
+    if (response.status === 200) {
       setStatus({ success: true, message: "Message sent successfully" });
     } else {
       setStatus({
