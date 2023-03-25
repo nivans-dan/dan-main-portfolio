@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/shield.png";
@@ -14,6 +14,11 @@ export const Banner = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(100 - Math.random() * 100);
   const period = 2000;
+  
+  const handleClick = () => { 
+    const element = document.getElementById("connect");
+    element.scrollIntoView({ behavior: "smooth" });
+  };
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -67,7 +72,7 @@ export const Banner = () => {
               professional world as a software developer. You can see some of my
               work on Github.
             </p>
-            <button onClick={() => console.log("connect")}>
+            <button onClick={handleClick}>
               Let's connect <ArrowRightCircle size={25} />
             </button>
           </Col>

@@ -10,6 +10,11 @@ export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
+  const handleClick = () => { 
+    const element = document.getElementById("connect");
+    element.scrollIntoView({ behavior: "smooth" });
+  };
+
   useEffect(() => {
     const onScroll = () => {
       window.scrollY > 50 ? setScrolled(true) : setScrolled(false);
@@ -86,7 +91,7 @@ export const NavBar = () => {
                 <img src={navIcon3} alt="" />
               </a>
             </div>
-            <button className="vvd" onClick={() => console.log("connect")}>
+            <button className="vvd" onClick={handleClick}>
               <span>Let's connect!</span>
             </button>
           </span>
